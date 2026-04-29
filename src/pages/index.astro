@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+import NavBar from '../components/NavBar.astro';
+import HeroSection from '../components/HeroSection.astro';
+import FeaturesSection from '../components/FeaturesSection.astro';
+import CTASection from '../components/CTASection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="加入 GroupHub，与志同道合的伙伴一起连接、分享、共同成长。" />
+		<title>GroupHub - 连接志同道合的伙伴</title>
+	</head>
+	<body class="bg-spotify-black text-spotify-white antialiased">
+		<NavBar />
+		<main>
+			<HeroSection />
+			<FeaturesSection />
+			<CTASection />
+		</main>
+		<Footer />
+	</body>
+</html>
