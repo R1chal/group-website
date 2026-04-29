@@ -3,12 +3,14 @@ export interface Props {
   title: string;
   description: string;
   icon: string;
+  index?: number;
 }
 
-const { title, description, icon } = Astro.props;
+const { title, description, icon, index = 0 } = Astro.props;
+const delayClass = index > 0 ? `delay-${Math.min(index * 100, 500)}` : '';
 ---
 
-<div class="group bg-spotify-dark rounded-lg p-6 hover:bg-spotify-card transition-all duration-300 hover:shadow-[rgba(0,0,0,0.3)_0px_8px_8px]">
+<div class={`group bg-spotify-dark rounded-lg p-6 hover:bg-spotify-card transition-all duration-300 hover:shadow-[rgba(0,0,0,0.3)_0px_8px_8px] ${delayClass}`} data-animate="fade-in-up">
   <div class="w-12 h-12 bg-spotify-mid rounded-full flex items-center justify-center mb-4 group-hover:bg-spotify-green/20 transition-colors">
     <Fragment set:html={icon} />
   </div>
