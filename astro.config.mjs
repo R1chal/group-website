@@ -5,8 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://r1chal.github.io',
-  base: '/group-website',
+  site: 'https://glittering-panda-169d19.netlify.app',
   vite: {
     plugins: [tailwindcss()]
   }
